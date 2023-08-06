@@ -1,0 +1,257 @@
+/* common css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Open+Sans:wght@400;800&family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+:root {
+  --pclr: #0f2f44;
+  --navclr: #ffc712;
+  --opensans: 'Open Sans', sans-serif;
+  --abril: 'Abril Fatface', 'Open Sans';
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* common css ends */
+/* header  */
+header {
+  background-color: var(--pclr);
+  color: white;
+  padding: 17px 0;
+  font-weight: 400;
+}
+
+header .opening {
+  width: 60%;
+  text-align: right;
+}
+header .wellcome {
+  width: 40%;
+}
+/* header ends */
+/* nav  */
+nav .menu {
+  width: 69%;
+  text-align: right;
+}
+nav .logo {
+  width: 31%;
+  padding: 30px 0;
+}
+.menu ul li {
+  display: inline-block;
+  padding: 0 19px;
+}
+.menu ul li a {
+  color: #222222;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 40px 6px;
+  display: inline-block;
+  font-size: 16px;
+}
+/* DIRECT CHILDREN SELECTOR */
+nav .menu ul li:hover > a {
+  color: var(--navclr);
+  background-color: #fff9e6;
+}
+
+button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+button li i {
+  text-align: left;
+}
+
+nav .menu ul .submenu {
+  position: absolute;
+  width: 180px;
+  text-align: left;
+  border: 1px solid #bbb;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+}
+/* DIRECT CHILDREN SELECTOR */
+nav .menu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+nav .menu .submenu li {
+  display: block;
+  border-bottom: 1px solid #bbb;
+}
+nav .menu .submenu a {
+  padding: 15px 20px;
+}
+nav .menu ul .submenu .sub {
+  position: absolute;
+  width: 180px;
+  text-align: left;
+  border: 1px solid #bbb;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s;
+}
+nav .menu li:hover > .sub {
+  opacity: 1;
+  visibility: visible;
+}
+/* NAV ENDS */
+/* BANNER STARTS */
+#banner {
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-size: cover;
+}
+#banner .banner_cnt {
+  display: block;
+  padding: 135px 0;
+  width: 42%;
+}
+#banner .banner_cnt h3 {
+  color: var(--pclr);
+  font-size: 50px;
+  font-weight: 300;
+}
+#banner .banner_cnt h2 {
+  color: var(--pclr);
+  font-size: 80px;
+  font-family: var(--abril);
+  font-weight: 400;
+  display: inline-block;
+  margin: -15px 0;
+}
+#banner .banner_cnt h4 {
+  font-size: 32px;
+  font-weight: 400;
+  color: #8484bf;
+  letter-spacing: 9px;
+}
+#banner .banner_cnt p {
+  margin-top: 30px;
+  font-family: var(--opensans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+}
+#banner .banner_cnt .ex {
+  color: white;
+  background-color: #8484bf;
+  display: inline-block;
+  padding: 10px 17px;
+  margin-top: 30px;
+  margin-left: -5px;
+  border-radius: 5px;
+}
+#banner .banner_cnt .myvideo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.221);
+}
+#banner .banner_cnt a {
+  color: #8484bf;
+  margin-left: 10px;
+}
+/* BANNER ENDS */
+/* About us starts  */
+#about .text {
+  width: 55%;
+  margin-top: 90px;
+}
+#about .img {
+  width: 45%;
+  margin-top: 90px;
+}
+.heading h4 {
+  font-weight: 300;
+}
+.heading h2 {
+  font-size: 32px;
+  font-family: var(--abril);
+  font-weight: 400;
+}
+#about .text p {
+  font-size: 16px;
+  font-family: var(--opensans);
+  font-weight: 400;
+  margin: 25px 0;
+}
+#about .text h5 {
+  font-size: 16px;
+  font-family: var(--opensans);
+  font-weight: 400;
+  line-height: 32px;
+  margin-left: 37px;
+}
+#about .text .know {
+  display: inline-block;
+  margin: 25px 20px;
+  color: black;
+  background-color: var(--navclr);
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+#about .text a {
+  display: inline-block;
+  color: black;
+  background-color: #fffffff4;
+  padding: 14px;
+  font-weight: 500;
+}
+#about .read {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.221);
+}
+
+/* About us ends */
+/* skill starts  */
+#skill .cartoon img {
+  width: 600px;
+  margin: 92px 0 92px 0;
+}
+#skill .skills {
+  margin: 92px 0 92px 0;
+  text-align: right;
+}
+#skill .skills h5 {
+  font-weight: 300;
+}
+#skill .skills p {
+  margin: 32px 0 41px 0;
+  font-size: 16px;
+  font-family: var(--opensans);
+  font-weight: 400;
+}
+#skill .skills h2 {
+  font-size: 32px;
+  font-family: var(--abril);
+  font-weight: 400;
+}
+/* skill ends  */
